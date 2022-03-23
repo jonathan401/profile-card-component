@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --main-bg: hsl(185, 75%, 39%); /* main bg */
+  --header-text-color: hsl(229, 23%, 23%); /* header text */
+  --text-gray: hsl(227, 10%, 46%); /* text faded */
+
+  /* neutral */
+  --dark-gray: hsl(0, 0%, 59%); /* text color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: var(--main-bg);
+  background-image: url('./images/bg-pattern-top.svg'),
+    url('./images/bg-pattern-bottom.svg');
+  background-size: 400px;
+  background-position: top -200px left -200px, bottom -200px right -200px;
+  background-repeat: no-repeat;
+}
+
+.card {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+}
+
+.profile-image {
+  width: 100px;
+  position: relative;
+  top: -50px;
+  margin-bottom: -30px;
+}
+
+.profile-image img {
+  border: 3px solid white;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.about {
+  text-align: center;
+  display: flex;
+  color: var(--text-gray);
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.bio h1,
+.stat h2 {
+  font-size: 1.2rem;
+}
+
+.bio h1 {
+  margin-right: 0.5rem;
+  color: var(--header-text-color);
+}
+
+.bio .age {
+  font-size: 1.2rem;
+}
+
+.stats {
+  border-top: 1px solid rgb(209, 202, 202);
+  width: 100%;
+  padding: 1.7rem;
+}
+
+.stats ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat h2 {
+  margin-bottom: 0.3rem;
+}
+
+.stat p {
+  letter-spacing: 2px;
+  color: var(--dark-gray);
+  font-size: 0.7rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background-size: 600px;
+    background-position: top -300px left -250px, bottom -300px right -250px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-size: 900px;
+    background-position: top -500px left -300px, bottom -500px right -300px;
+  }
+}
